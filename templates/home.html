@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color:	#738e54 ;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    color:#253126;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto; /* Increased margin for better centering */
+    padding: 30px; /* Added padding for better spacing */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: green;
+    animation: pulse 0.5s ease infinite alternate;
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to Movie Recommendation System</h1>
+    <form action="/recommend" method="post">
+        <label for="movie_name">Enter Movie Name:</label>
+        <input type="text" id="movie_name" name="movie_name">
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>
